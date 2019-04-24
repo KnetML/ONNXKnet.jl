@@ -7,6 +7,6 @@ include("convert.jl")
 include("new_types.jl")
 include("graph/graph.jl")
 
-using Flux
+using Knet
 
 end #module
