@@ -25,6 +25,21 @@ This package is still under development and quite a few things need to be done h
 
 2. Look into ways of removing code redundacy : Discuss if it's a good idea to add ONNX.jl as a dependency, so that the model interface code can be shared.
 
+## Supported operators:
+
+Currently supported operators include:
+
+1. Reshape
+2. Conv
+3. Concat
+4. Add
+5. Mul
+6. Relu
+7. Maxpool
+8. AveragePool
+9. Matmul
+10. GlobalAveragePool
+
 ## Contributing
 
 Contributors are always welcome. Discussion takes place on Julia Slack, either on the #Knet or #ONNX channels.

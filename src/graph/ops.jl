@@ -84,7 +84,7 @@ ops[:BatchNormalization] = function (params, x, scale, b, mean, var)
   if !haskey(params, Symbol("epsilon"))
     params[:epsilon] = 1e-5
   end
-  bv = vcall(:BNMoments, params[:momentum], mean, var, zeros, ones)
+  bv = vcall(Symbol("Knet.BNMoments"), params[:momentum], mean, var, zeros, ones)
   return vcall(:batchnorm, x, bv, Symbol("epsilon=$(params[:epsilon])"), Symbol("training=false"))
 end
 
